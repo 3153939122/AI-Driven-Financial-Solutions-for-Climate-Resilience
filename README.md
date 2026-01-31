@@ -1,8 +1,8 @@
 """
 climate_vulnerability_analysis.py
 Complete data processing and analysis pipeline
-Author: [Your Name]
-Date: [Date]
+Author: Muhammad Ali
+Date: 15-07-2025
 """
 
 import pandas as pd
