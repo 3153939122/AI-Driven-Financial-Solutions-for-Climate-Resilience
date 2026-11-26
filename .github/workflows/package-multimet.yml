@@ -1,0 +1,20 @@
+name: Package MultiMET dataset
+on:
+  push:
+    branches: [ chatgpt-multimet-5835 ]
+    paths:
+      - 'datasets/MultiMET_5835_Five_Class_Multimodal_Sentiment.csv'
+      - 'datasets/MultiMET_5835_Five_Class_Multimodal_Sentiment.xlsx'
+      - '.github/workflows/package-multimet.yml'
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MultiMET_5835_Five_Class_Multimodal_Sentiment
+          path: |
+            datasets/MultiMET_5835_Five_Class_Multimodal_Sentiment.csv
+            datasets/MultiMET_5835_Five_Class_Multimodal_Sentiment.xlsx
+          if-no-files-found: error
